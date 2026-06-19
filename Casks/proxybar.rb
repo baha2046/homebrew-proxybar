@@ -1,6 +1,6 @@
 cask "proxybar" do
-  version "1.0.0"
-  sha256 "96cce88662c3a60fa65951f5ccc07ea34d561deb222a717a6cd0b119a8a32b18"
+  version "1.0.1"
+  sha256 "077fa70410146db12ec4128dd415d50feef69802f82c283addc2844c012ba67b"
 
   url "https://github.com/baha2046/ProxyBar/releases/download/v#{version}/ProxyBar-#{version}.zip"
   name "ProxyBar"
