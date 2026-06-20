@@ -4,10 +4,15 @@ cask "proxybar" do
 
   url "https://github.com/baha2046/ProxyBar/releases/download/v#{version}/ProxyBar-#{version}.zip"
   name "ProxyBar"
-  desc "macOS menu bar app for WireGuard split tunneling"
+  desc "Menu bar app for WireGuard split tunneling"
   homepage "https://github.com/baha2046/ProxyBar"
 
   depends_on macos: :ventura
 
   app "ProxyBar.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/ProxyBar.app"]
+  end
 end
